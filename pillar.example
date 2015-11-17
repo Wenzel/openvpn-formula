@@ -53,6 +53,9 @@ openvpn:
       duplicate_cn: False
       keepalive: '10 120'
       tls_auth: /path/to/tls.key 0
+      tls_ciphers:
+        - TLS-RSA-WITH-AES-256-CBC-SHA
+        - TLS-RSA-WITH-AES-128-CBC-SHA
       ta_content: |
         -----BEGIN OpenVPN Static key V1-----
         ...

@@ -124,6 +124,12 @@ cipher "{{ cipher }}"
 {%- endfor %}
 {%- endif %}
 
+{%- if config.tls_ciphers is defined %}
+{%- for cipher in config.tls_ciphers %}
+tls-cipher "{{ cipher }}"
+{%- endfor %}
+{%- endif %}
+
 {%- if config.tls_version_min is defined %}
 tls-version-min {{ config.tls_version_min }}
 {%- endif %}
