@@ -124,6 +124,10 @@ cipher "{{ cipher }}"
 {%- endfor %}
 {%- endif %}
 
+{%- if config.tls_version_min is defined %}
+tls-version-min {{ config.tls_version_min }}
+{%- endif %}
+
 {%- if config.comp_lzo is defined and config.comp_lzo == False %}
 ;comp-lzo
 {%- else %}
